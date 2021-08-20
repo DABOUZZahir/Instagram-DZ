@@ -36,13 +36,13 @@ export default function Post({content}) {
 
 Post.propTypes = {
     content: PropTypes.shape({
-        username : PropTypes.string.isRequired,
-        imageSrc : PropTypes.string.isRequired,
-        caption : PropTypes.string.isRequired,
-        docId : PropTypes.string.isRequired,
-        userLikedPhoto : PropTypes.bool.isRequired,
-        Likes : PropTypes.array.isRequired,
-        comments : PropTypes.array.isRequired,
-        dateCreated : PropTypes.number.isRequired,
-    })
+        username : PropTypes.string,
+        imageSrc : PropTypes.string,
+        caption : PropTypes.string,
+        docId : PropTypes.string,
+        userLikedPhoto : PropTypes.bool,
+        Likes : PropTypes.array,
+        comments : PropTypes.array,
+        dateCreated : PropTypes.number,
+    }).isRequired
 }

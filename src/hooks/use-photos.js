@@ -1,7 +1,6 @@
 import { useEffect, useContext, useState } from 'react';
 import { getUserByUserId, getPhotos } from '../services/firebase'
 import UserContext from '../context/user'
-import { set } from 'date-fns';
 
 export default function usePhotos() {
     const [photos, setPhotos] = useState(null)

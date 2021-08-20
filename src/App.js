@@ -6,10 +6,9 @@ import UserContext from './context/user'
 
 import ProtectedRoute from './helpers/protected-route'
 import IsUserLoggedIn from './helpers/is-user-logged-in'
-import SignUp from './pages/sign-up';
 
 const Login = lazy(() => import ('./pages/login'));
-const signUp = lazy(() => import ('./pages/sign-up'));
+const SignUp = lazy(() => import ('./pages/sign-up'));
 const Dashboard = lazy(() => import ('./pages/dashboard'));
 const NotFound = lazy(() => import ('./pages/not-found'));
 const Profile = lazy(() => import ('./pages/profile'));;

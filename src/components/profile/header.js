@@ -1,9 +1,8 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Skeleton from 'react-loading-skeleton';
 import useUser from '../../hooks/use-user';
 import { isUserFollowingProfile, toggleFollow } from '../../services/firebase';
-import UserContext from '../../context/user';
 
 export default function Header({
   photosCount,
@@ -49,7 +48,7 @@ export default function Header({
             {user.username  && (
                 <img
                     className="rounded-full h-40 w-40 flex"
-                    alt={`${user.username} profile picture`}
+                    alt={`${user.username} profile`}
                     src={`/images/avatars/${profileUsername}.jpg`} />
             )}
                 
@@ -73,7 +72,7 @@ export default function Header({
                     )}
                 </div>
                 <div className="container flex mt-4">
-                    {followers === undefined || following === undefined ? (
+                    {!followers || !following ? (
                         <Skeleton count={1} width={677} height={24} />
                     ) : (
                         <>

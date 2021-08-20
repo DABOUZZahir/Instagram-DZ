@@ -48,6 +48,7 @@ export default function SignUp() {
         setError(error.message)
       }
     } else {
+      setUserName('')
       setError('That username is already taken, please choose another one')
     }
     

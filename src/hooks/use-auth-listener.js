@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event'
 import { useState, useEffect, useContext } from 'react'
 import FirebaseContext from '../context/firebase'
 
